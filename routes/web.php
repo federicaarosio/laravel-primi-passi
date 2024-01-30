@@ -19,3 +19,11 @@ Route::get('/', function () {
                         'description' => 'this is a wonderful place'
                         ]);
 });
+
+Route::get('/contacts', function () {
+    $phone = '339 111 222 333';
+    $address = 'abcde street';
+    return view('contacts', ['phone'=> $phone,
+                            'address' => $address
+                            ]);
+});
